@@ -1,0 +1,41 @@
+{
+  "name": "Arvind Kumar",
+  "headline": "Full-Stack Developer | AI-Powered Apps, Autonomous Agents & RAG Systems",
+  "location": "Pune, India",
+  "education": {
+    "institution": "Indian Institute of Information Technology, Pune (IIIT Pune)",
+    "degree": "Bachelor of Technology — Electronics and Communication Engineering",
+    "period": "Expected Jan 2028",
+    "gpa": "7.7"
+  },
+  "summary": "B.Tech student at IIIT Pune building production-grade full-stack web applications, autonomous AI agents, and RAG pipelines across React.js, Node.js, TypeScript, and MongoDB.",
+  "quote": "Software used to follow rules. Today, we architect software that learns, reasons, and acts.",
+  "availability": "Open to full-time roles (Senior / Full-Stack & AI Engineer) — Remote or Hybrid",
+  "contact": {
+    "email": "shivantag2022@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/arvind-kumar-4364a0338",
+    "github": "https://github.com/Arvindkumar-star"
+  },
+  "resumeUrl": "/Arvind_Kumar_Resume.pdf",
+  "certifications": [
+    "Web3 & Rust Foundations — Lampros DAO (04/2026)",
+    "MCP Project Completion — NxtWave (11/2025)",
+    "Build and Launch MVP Project — NxtWave (06/2026)",
+    "Idea2Impact Hackathon"
+  ],
+  "philosophy": [
+    "Ground AI in real, structured data to eliminate hallucinations",
+    "Automate repetitive workflows end-to-end",
+    "Ship clean, type-safe, and resilient full-stack architectures",
+    "Obsess over user experience, speed, and latency"
+  ],
+  "softSkills": [
+    "Technical Architecture & Problem Solving",
+    "System Design & End-to-End Automation",
+    "Agile Development & Proactive Communication",
+    "Continuous Learning & AI Research",
+    "Leadership & Collaborative Teamwork"
+  ],
+  "careerGoals": "Build next-generation intelligent applications and autonomous agent pipelines that solve high-impact real-world problems.",
+  "doNotDisclose": ["current salary", "home address"]
+}

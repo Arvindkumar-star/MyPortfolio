@@ -1,0 +1,33 @@
+{
+  "experiences": [
+    {
+      "id": "exp-1",
+      "role": "Full-Stack & AI Application Development",
+      "company": "Personal & Open Source Projects",
+      "location": "Pune, India",
+      "period": "2025 – Present",
+      "summary": "Architected and built full-stack applications and AI-driven platforms demonstrating end-to-end ownership across frontend, backend, REST APIs, databases, and AI model integration.",
+      "highlights": [
+        "Developed AI Academic OS, an AI-powered academic productivity platform integrating modern web technologies and AI capabilities to help students manage and interact with academic resources.",
+        "Built AI-powered Resume Builder & ATS Analyzer using the MERN stack with 4 specialized collaborative AI agents to assist with resume creation, optimization, and ATS-focused scoring.",
+        "Engineered an AI-powered Mock Interview Platform with full-stack architecture, dynamic speech/transcript evaluation, and role-based real-time interview simulator.",
+        "Designed and integrated frontend, backend, REST APIs, database systems, authentication, and AI services with sub-second retrieval times."
+      ],
+      "technologies": ["React", "Next.js", "Node.js", "Express.js", "MongoDB", "LangChain", "Generative AI", "RAG", "TypeScript", "Python"]
+    },
+    {
+      "id": "exp-2",
+      "role": "B.Tech in Electronics & Communication Engineering",
+      "company": "Indian Institute of Information Technology, Pune (IIIT Pune)",
+      "location": "Pune, India",
+      "period": "Expected Jan 2028",
+      "summary": "Pursuing B.Tech with focus on software engineering, data structures, algorithms, machine learning, and hardware-software systems with GPA 7.7.",
+      "highlights": [
+        "Core Coursework: Data Structures & Algorithms, Database Management, Operating Systems, Machine Learning, Linear Algebra.",
+        "Certifications: Web3 & Rust Foundations (Lampros DAO), MCP Project Completion (NxtWave), Build & Launch MVP Project (NxtWave).",
+        "Active Hackathon Participant: Idea2Impact Hackathon, Razorpay AI Buildathon."
+      ],
+      "technologies": ["C++", "C", "Python", "SQL", "JavaScript", "Linux", "Git"]
+    }
+  ]
+}

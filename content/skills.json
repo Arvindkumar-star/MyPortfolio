@@ -1,0 +1,60 @@
+{
+  "domains": [
+    {
+      "name": "Languages & Core",
+      "skills": [
+        { "name": "Python", "level": "Expert", "proficiency": 95 },
+        { "name": "C++", "level": "Advanced", "proficiency": 88 },
+        { "name": "C", "level": "Advanced", "proficiency": 85 },
+        { "name": "JavaScript", "level": "Expert", "proficiency": 95 },
+        { "name": "TypeScript", "level": "Expert", "proficiency": 92 },
+        { "name": "SQL", "level": "Advanced", "proficiency": 90 },
+        { "name": "Linear Algebra", "level": "Advanced", "proficiency": 88 },
+        { "name": "Data Cleaning", "level": "Expert", "proficiency": 92 },
+        { "name": "Feature Engineering", "level": "Advanced", "proficiency": 88 }
+      ]
+    },
+    {
+      "name": "AI & Machine Learning",
+      "skills": [
+        { "name": "Generative AI", "level": "Expert", "proficiency": 96 },
+        { "name": "RAG (Retrieval-Augmented Gen)", "level": "Expert", "proficiency": 95 },
+        { "name": "LangChain", "level": "Expert", "proficiency": 92 },
+        { "name": "Vercel AI SDK", "level": "Expert", "proficiency": 92 },
+        { "name": "Autonomous AI Agents", "level": "Expert", "proficiency": 94 },
+        { "name": "Machine Learning", "level": "Advanced", "proficiency": 88 },
+        { "name": "Image Processing & Vision", "level": "Advanced", "proficiency": 86 },
+        { "name": "Vector DBs (Pinecone, pgvector)", "level": "Advanced", "proficiency": 90 },
+        { "name": "Prompt Engineering & Guardrails", "level": "Expert", "proficiency": 95 }
+      ]
+    },
+    {
+      "name": "Frontend & Backend Web Development",
+      "skills": [
+        { "name": "React.js", "level": "Expert", "proficiency": 95 },
+        { "name": "Next.js", "level": "Expert", "proficiency": 95 },
+        { "name": "Tailwind CSS", "level": "Expert", "proficiency": 95 },
+        { "name": "Node.js", "level": "Expert", "proficiency": 92 },
+        { "name": "Express.js", "level": "Expert", "proficiency": 92 },
+        { "name": "MongoDB & MERN Stack", "level": "Expert", "proficiency": 92 },
+        { "name": "Supabase & PostgreSQL", "level": "Advanced", "proficiency": 92 },
+        { "name": "REST & GraphQL APIs", "level": "Expert", "proficiency": 94 },
+        { "name": "Redux & State Management", "level": "Advanced", "proficiency": 88 },
+        { "name": "SQLite", "level": "Advanced", "proficiency": 90 },
+        { "name": "HTML & CSS", "level": "Expert", "proficiency": 95 },
+        { "name": "Framer Motion", "level": "Advanced", "proficiency": 88 }
+      ]
+    },
+    {
+      "name": "Tools, Cloud & Platforms",
+      "skills": [
+        { "name": "Git & GitHub CI/CD", "level": "Expert", "proficiency": 95 },
+        { "name": "AWS & Cloud Services", "level": "Advanced", "proficiency": 85 },
+        { "name": "Docker & Containerization", "level": "Intermediate", "proficiency": 82 },
+        { "name": "Vercel & Render Deployment", "level": "Expert", "proficiency": 92 },
+        { "name": "Software Development Lifecycle", "level": "Expert", "proficiency": 94 },
+        { "name": "Technical Leadership", "level": "Advanced", "proficiency": 90 }
+      ]
+    }
+  ]
+}
