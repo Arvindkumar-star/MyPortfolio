@@ -110,17 +110,20 @@ export function ProjectsGrid({ projects }: { projects: ProjectCard[] }) {
                 key={p.id}
                 id={`project-${p.name}`}
                 onClick={() => setActiveModalProject(p)}
-                className={`group relative flex flex-col justify-between rounded-2xl border p-5 backdrop-blur-xl bg-white dark:bg-slate-900/90 transition-all duration-300 cursor-pointer ${
+                className={`group relative flex flex-col justify-between rounded-2xl border p-6 backdrop-blur-xl bg-white/95 dark:bg-[#0b0f19]/90 transition-all duration-300 cursor-pointer ${
                   isHighlighted
-                    ? "border-indigo-500 ring-2 ring-indigo-500 shadow-xl shadow-indigo-500/20 scale-[1.02]"
-                    : "border-slate-200/90 dark:border-slate-800 hover:border-indigo-500/60 shadow-sm hover:shadow-xl hover:-translate-y-1"
+                    ? "border-indigo-500 ring-2 ring-indigo-500/50 shadow-2xl shadow-indigo-500/20 scale-[1.02]"
+                    : "border-slate-200/90 dark:border-slate-800/90 hover:border-indigo-500/60 shadow-md hover:shadow-2xl hover:shadow-indigo-500/10 hover:-translate-y-1.5"
                 }`}
               >
-                <div>
+                {/* Subtle Hover Gradient Aura */}
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-indigo-500/5 via-transparent to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
+
+                <div className="relative z-10">
                   {/* Card Header */}
                   <div className="flex items-start justify-between gap-3">
                     <div className="min-w-0 flex-1">
-                      <div className="font-bold text-base text-slate-900 dark:text-slate-50 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors flex items-center gap-1.5 break-words">
+                      <div className="font-bold text-base sm:text-lg text-slate-900 dark:text-slate-50 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors flex items-center gap-1.5 break-words">
                         <span className="truncate">{p.name}</span>
                         {p.pinned && (
                           <span
@@ -148,7 +151,7 @@ export function ProjectsGrid({ projects }: { projects: ProjectCard[] }) {
                   </div>
 
                   {/* Description */}
-                  <p className="mt-2.5 text-xs sm:text-sm text-slate-600 dark:text-slate-400 line-clamp-3 leading-relaxed font-normal">
+                  <p className="mt-3 text-xs sm:text-sm text-slate-600 dark:text-slate-300/90 line-clamp-3 leading-relaxed font-normal">
                     {p.description || "Production project built by Arvind Kumar."}
                   </p>
 
@@ -165,10 +168,16 @@ export function ProjectsGrid({ projects }: { projects: ProjectCard[] }) {
                       </Badge>
                     ))}
                   </div>
+
+                  {/* Interactive Details Cue */}
+                  <div className="mt-3.5 flex items-center gap-1 text-[11px] font-mono text-indigo-500/80 group-hover:text-indigo-400 transition-colors">
+                    <Info size={12} />
+                    <span>Click card to view architecture & features</span>
+                  </div>
                 </div>
 
                 {/* Card Footer */}
-                <div className="mt-5 pt-3.5 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-xs text-slate-600 dark:text-slate-400">
+                <div className="relative z-10 mt-5 pt-3.5 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-xs text-slate-600 dark:text-slate-400">
                   {/* GitHub Stars & Forks */}
                   <div className="flex items-center gap-3 font-mono text-xs">
                     <span className="flex items-center gap-1 font-medium" title={`${p.stars} Stars`}>
@@ -186,7 +195,7 @@ export function ProjectsGrid({ projects }: { projects: ProjectCard[] }) {
                     <button
                       onClick={() => askAiAboutProject(p.name)}
                       title="Ask AI assistant about this project"
-                      className="flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-indigo-50 dark:bg-indigo-950/40 text-indigo-700 dark:text-indigo-300 hover:bg-indigo-600 hover:text-white dark:hover:bg-indigo-500 dark:hover:text-white transition-all text-xs font-semibold cursor-pointer border border-indigo-200 dark:border-indigo-800/60"
+                      className="flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-indigo-50 dark:bg-indigo-950/40 text-indigo-700 dark:text-indigo-300 hover:bg-indigo-600 hover:text-white dark:hover:bg-indigo-500 dark:hover:text-white transition-all text-xs font-semibold cursor-pointer border border-indigo-200 dark:border-indigo-800/60 shadow-xs"
                     >
                       <Sparkles size={12} />
                       <span>Ask AI</span>
@@ -200,7 +209,7 @@ export function ProjectsGrid({ projects }: { projects: ProjectCard[] }) {
                         rel="noopener noreferrer"
                         title={`Launch Live App: ${p.homepage}`}
                         aria-label={`Launch Live App: ${p.name}`}
-                        className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 dark:bg-emerald-500 dark:hover:bg-emerald-400 text-white transition-all text-xs font-semibold shadow-xs"
+                        className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 dark:bg-emerald-500 dark:hover:bg-emerald-400 text-white transition-all text-xs font-bold shadow-xs hover:scale-105"
                       >
                         <Globe size={12} className="text-white" />
                         <span>Live</span>
@@ -213,7 +222,7 @@ export function ProjectsGrid({ projects }: { projects: ProjectCard[] }) {
                         rel="noopener noreferrer"
                         title="View GitHub Repository"
                         aria-label={`View GitHub Repo: ${p.name}`}
-                        className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-900 dark:bg-slate-800 dark:hover:bg-slate-700 text-white transition-all text-xs font-medium border border-slate-700"
+                        className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-900 dark:bg-slate-800 dark:hover:bg-slate-700 text-white transition-all text-xs font-medium border border-slate-700 hover:scale-105"
                       >
                         <GithubIcon size={12} className="text-white" />
                         <span>Repo</span>
