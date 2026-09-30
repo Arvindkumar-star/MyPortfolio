@@ -9,22 +9,12 @@ export const revalidate = 3600; // ISR cache revalidation every hour
 
 export default function Home() {
   return (
-    <div className="flex flex-col w-full">
-      <div className="w-full">
-        <Hero />
-      </div>
-      <div className="w-full bg-slate-100/50 dark:bg-slate-900/40 py-4">
-        <Projects />
-      </div>
-      <div className="w-full">
-        <Skills />
-      </div>
-      <div className="w-full bg-slate-100/50 dark:bg-slate-900/40 py-4">
-        <Timeline />
-      </div>
-      <div className="w-full">
-        <Contact />
-      </div>
+    <div className="flex flex-col w-full bg-[#090D16]">
+      <Hero />
+      <Projects />
+      <Skills />
+      <Timeline />
+      <Contact />
     </div>
   );
 }

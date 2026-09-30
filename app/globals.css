@@ -2,23 +2,9 @@
 
 @layer base {
   :root {
-    --bg: #FAFAFA;
-    --surface: #FFFFFF;
-    --glass: rgba(255, 255, 255, 0.92);
-    --border: rgba(15, 23, 42, 0.08);
-    --border-accent: rgba(79, 70, 229, 0.3);
-    --text: #0F172A;
-    --muted: #334155;
-    --accent: #4F46E5;
-    --accent-2: #0284C7;
-    --glow: 0 0 40px rgba(79, 70, 229, 0.12);
-    --card-bg: #FFFFFF;
-  }
-
-  .dark {
     --bg: #090D16;
-    --surface: #0F172A;
-    --glass: rgba(15, 23, 42, 0.85);
+    --surface: #0B0F19;
+    --glass: rgba(11, 15, 25, 0.85);
     --border: rgba(255, 255, 255, 0.08);
     --border-accent: rgba(129, 140, 248, 0.35);
     --text: #F8FAFC;
@@ -26,12 +12,26 @@
     --accent: #6366F1;
     --accent-2: #38BDF8;
     --glow: 0 0 48px rgba(99, 102, 241, 0.25);
-    --card-bg: rgba(15, 23, 42, 0.85);
+    --card-bg: #0B0F19;
+  }
+
+  .dark {
+    --bg: #090D16;
+    --surface: #0B0F19;
+    --glass: rgba(11, 15, 25, 0.85);
+    --border: rgba(255, 255, 255, 0.08);
+    --border-accent: rgba(129, 140, 248, 0.35);
+    --text: #F8FAFC;
+    --muted: #94A3B8;
+    --accent: #6366F1;
+    --accent-2: #38BDF8;
+    --glow: 0 0 48px rgba(99, 102, 241, 0.25);
+    --card-bg: #0B0F19;
   }
 
   html {
     scroll-behavior: smooth;
-    color-scheme: light dark;
+    color-scheme: dark;
   }
 
   body {

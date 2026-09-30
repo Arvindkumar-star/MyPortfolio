@@ -256,14 +256,14 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
 
   return (
     <AnimatePresence>
-      <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 overflow-y-auto">
+      <div className="fixed inset-0 z-50 flex items-center justify-center p-2.5 sm:p-6 overflow-y-auto">
         {/* Backdrop */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           onClick={onClose}
-          className="fixed inset-0 bg-slate-950/70 backdrop-blur-md transition-opacity"
+          className="fixed inset-0 bg-slate-950/80 backdrop-blur-md transition-opacity"
         />
 
         {/* Modal Window */}
@@ -272,58 +272,58 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95, y: 15 }}
           transition={{ duration: 0.25, ease: "easeOut" }}
-          className="relative w-full max-w-3xl rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-2xl overflow-hidden z-10 my-8 flex flex-col max-h-[90vh]"
+          className="relative w-full max-w-3xl rounded-2xl sm:rounded-3xl border border-slate-800 bg-[#0B0F19] shadow-2xl overflow-hidden z-10 my-4 sm:my-8 flex flex-col max-h-[92vh]"
         >
           {/* Header Banner */}
-          <div className="relative p-6 sm:p-8 pb-6 border-b border-slate-100 dark:border-slate-800/80 bg-gradient-to-b from-slate-50 to-white dark:from-slate-900/90 dark:to-slate-900">
+          <div className="relative p-5 sm:p-8 pb-5 border-b border-slate-800/80 bg-[#090D16]">
             {/* Close Button */}
             <button
               onClick={onClose}
               aria-label="Close project details"
-              className="absolute top-5 right-5 p-2 rounded-xl text-slate-400 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors cursor-pointer"
+              className="absolute top-4 right-4 p-2 rounded-xl text-slate-400 hover:text-white hover:bg-slate-800 transition-colors cursor-pointer"
             >
-              <X size={20} />
+              <X size={18} />
             </button>
 
-            <div className="flex flex-wrap items-center gap-2 mb-3">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-50 dark:bg-indigo-950/50 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800/60 text-xs font-mono font-semibold">
-                <Layers size={13} />
+            <div className="flex flex-wrap items-center gap-2 mb-2.5 pr-8">
+              <span className="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1 rounded-full bg-indigo-950/50 text-indigo-300 border border-indigo-800/60 text-[11px] sm:text-xs font-mono font-semibold">
+                <Layers size={12} />
                 <span>{details.category}</span>
               </span>
 
               {isDeployed ? (
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border border-emerald-500/20 text-xs font-mono font-semibold">
-                  <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                <span className="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-[11px] sm:text-xs font-mono font-semibold">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
                   <span>Live Deployed</span>
                 </span>
               ) : (
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-700 text-xs font-mono font-semibold">
-                  <GithubIcon size={13} />
+                <span className="inline-flex items-center gap-1 px-2.5 sm:px-3 py-1 rounded-full bg-slate-800 text-slate-400 border border-slate-700 text-[11px] sm:text-xs font-mono font-semibold">
+                  <GithubIcon size={12} />
                   <span>Open Source</span>
                 </span>
               )}
             </div>
 
-            <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+            <h2 className="text-xl sm:text-3xl font-extrabold tracking-tight text-white pr-6">
               {details.title}
             </h2>
 
-            <p className="mt-1 text-sm font-medium text-slate-600 dark:text-slate-300">
+            <p className="mt-1 text-xs sm:text-sm font-medium text-slate-300">
               {details.tagline}
             </p>
 
             {/* Quick CTAs */}
-            <div className="mt-5 flex flex-wrap items-center gap-3">
+            <div className="mt-4 sm:mt-5 flex flex-wrap items-center gap-2 sm:gap-3">
               {isDeployed && (
                 <a
                   href={project.homepage!}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 dark:bg-emerald-500 dark:hover:bg-emerald-400 text-white text-xs font-bold transition-all shadow-md shadow-emerald-500/20 hover:scale-[1.02] active:scale-[0.98]"
+                  className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold transition-all shadow-md shadow-emerald-500/20 hover:scale-[1.02] active:scale-[0.98]"
                 >
-                  <Globe size={14} className="text-white" />
+                  <Globe size={13} className="text-white" />
                   <span>Launch Live App</span>
-                  <ArrowUpRight size={13} className="text-white" />
+                  <ArrowUpRight size={12} className="text-white" />
                 </a>
               )}
 
@@ -331,44 +331,44 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
                 href={project.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-800 dark:text-slate-100 hover:text-slate-950 dark:hover:text-white hover:border-indigo-500 transition-all text-xs font-semibold shadow-xs"
+                className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl border border-slate-700 bg-slate-800 text-slate-100 hover:text-white hover:border-indigo-500 transition-all text-xs font-semibold shadow-xs"
               >
-                <GithubIcon size={14} />
-                <span>View Source Code</span>
-                <ExternalLink size={12} className="text-slate-400" />
+                <GithubIcon size={13} />
+                <span>Source Code</span>
+                <ExternalLink size={11} className="text-slate-400" />
               </a>
 
               <button
                 onClick={askAiAboutThis}
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-indigo-50 dark:bg-indigo-950/40 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800/60 hover:bg-indigo-600 hover:text-white dark:hover:bg-indigo-500 dark:hover:text-white transition-all text-xs font-semibold cursor-pointer"
+                className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-indigo-950/40 text-indigo-300 border border-indigo-800/60 hover:bg-indigo-500 hover:text-white transition-all text-xs font-semibold cursor-pointer"
               >
-                <Sparkles size={13} />
-                <span>Ask AI Assistant</span>
+                <Sparkles size={12} />
+                <span>Ask AI</span>
               </button>
             </div>
           </div>
 
           {/* Modal Body - Scrollable */}
-          <div className="flex-1 overflow-y-auto p-6 sm:p-8 space-y-6 select-text text-sm">
+          <div className="flex-1 overflow-y-auto p-5 sm:p-8 space-y-5 sm:space-y-6 select-text text-xs sm:text-sm">
             {/* Overview */}
             <div className="space-y-2">
-              <h3 className="text-xs font-mono uppercase tracking-wider text-indigo-600 dark:text-indigo-400 font-bold flex items-center gap-1.5">
-                <Layers size={14} />
+              <h3 className="text-xs font-mono uppercase tracking-wider text-indigo-400 font-bold flex items-center gap-1.5">
+                <Layers size={13} />
                 <span>Project Overview</span>
               </h3>
-              <p className="text-slate-700 dark:text-slate-300 leading-relaxed font-normal">
+              <p className="text-slate-300 leading-relaxed font-normal">
                 {details.fullOverview}
               </p>
             </div>
 
             {/* Problem & Solution */}
             {details.problemSolved && (
-              <div className="p-4 rounded-2xl border border-indigo-100 dark:border-indigo-950/60 bg-indigo-50/40 dark:bg-indigo-950/20 space-y-2">
-                <h3 className="text-xs font-mono uppercase tracking-wider text-indigo-700 dark:text-indigo-300 font-bold flex items-center gap-1.5">
-                  <Sparkles size={14} />
+              <div className="p-4 rounded-2xl border border-indigo-900/60 bg-indigo-950/20 space-y-2">
+                <h3 className="text-xs font-mono uppercase tracking-wider text-indigo-300 font-bold flex items-center gap-1.5">
+                  <Sparkles size={13} />
                   <span>Problem Solved & Innovation</span>
                 </h3>
-                <p className="text-slate-700 dark:text-slate-300 text-xs sm:text-sm leading-relaxed">
+                <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
                   {details.problemSolved}
                 </p>
               </div>
@@ -377,17 +377,17 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
             {/* Key Features */}
             {details.keyFeatures && details.keyFeatures.length > 0 && (
               <div className="space-y-3">
-                <h3 className="text-xs font-mono uppercase tracking-wider text-indigo-600 dark:text-indigo-400 font-bold flex items-center gap-1.5">
-                  <CheckCircle2 size={14} />
+                <h3 className="text-xs font-mono uppercase tracking-wider text-indigo-400 font-bold flex items-center gap-1.5">
+                  <CheckCircle2 size={13} />
                   <span>Key Features & Capabilities</span>
                 </h3>
-                <ul className="grid gap-2.5 sm:grid-cols-1">
+                <ul className="grid gap-2 sm:grid-cols-1">
                   {details.keyFeatures.map((feat, idx) => (
                     <li
                       key={idx}
-                      className="flex items-start gap-2.5 text-slate-700 dark:text-slate-300 text-xs sm:text-sm"
+                      className="flex items-start gap-2.5 text-slate-300 text-xs sm:text-sm"
                     >
-                      <span className="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-indigo-100 dark:bg-indigo-900/60 text-indigo-600 dark:text-indigo-400 text-[10px] font-bold">
+                      <span className="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-indigo-900/60 text-indigo-400 text-[10px] font-bold">
                         ✓
                       </span>
                       <span className="leading-relaxed">{feat}</span>
@@ -400,11 +400,11 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
             {/* Architecture Highlights */}
             {details.architecture && (
               <div className="space-y-2">
-                <h3 className="text-xs font-mono uppercase tracking-wider text-indigo-600 dark:text-indigo-400 font-bold flex items-center gap-1.5">
-                  <Cpu size={14} />
+                <h3 className="text-xs font-mono uppercase tracking-wider text-indigo-400 font-bold flex items-center gap-1.5">
+                  <Cpu size={13} />
                   <span>Architecture & Engineering</span>
                 </h3>
-                <p className="text-slate-700 dark:text-slate-300 text-xs sm:text-sm leading-relaxed font-normal">
+                <p className="text-slate-300 text-xs sm:text-sm leading-relaxed font-normal">
                   {details.architecture}
                 </p>
               </div>
@@ -412,14 +412,14 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
 
             {/* Tech Stack Breakdown */}
             <div className="space-y-3">
-              <h3 className="text-xs font-mono uppercase tracking-wider text-indigo-600 dark:text-indigo-400 font-bold flex items-center gap-1.5">
-                <Code2 size={14} />
+              <h3 className="text-xs font-mono uppercase tracking-wider text-indigo-400 font-bold flex items-center gap-1.5">
+                <Code2 size={13} />
                 <span>Technologies & Frameworks</span>
               </h3>
               <div className="space-y-2.5">
                 {details.techBreakdown.frontend && (
                   <div className="flex flex-wrap items-center gap-2">
-                    <span className="text-xs font-mono font-semibold text-slate-500 dark:text-slate-400 min-w-[90px]">
+                    <span className="text-xs font-mono font-semibold text-slate-400 min-w-[90px]">
                       Frontend:
                     </span>
                     <div className="flex flex-wrap gap-1.5">
@@ -433,7 +433,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
                 )}
                 {details.techBreakdown.backend && (
                   <div className="flex flex-wrap items-center gap-2">
-                    <span className="text-xs font-mono font-semibold text-slate-500 dark:text-slate-400 min-w-[90px]">
+                    <span className="text-xs font-mono font-semibold text-slate-400 min-w-[90px]">
                       Backend:
                     </span>
                     <div className="flex flex-wrap gap-1.5">
@@ -447,7 +447,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
                 )}
                 {details.techBreakdown.aiAndLlm && (
                   <div className="flex flex-wrap items-center gap-2">
-                    <span className="text-xs font-mono font-semibold text-slate-500 dark:text-slate-400 min-w-[90px]">
+                    <span className="text-xs font-mono font-semibold text-slate-400 min-w-[90px]">
                       AI / LLM:
                     </span>
                     <div className="flex flex-wrap gap-1.5">
@@ -461,7 +461,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
                 )}
                 {details.techBreakdown.database && (
                   <div className="flex flex-wrap items-center gap-2">
-                    <span className="text-xs font-mono font-semibold text-slate-500 dark:text-slate-400 min-w-[90px]">
+                    <span className="text-xs font-mono font-semibold text-slate-400 min-w-[90px]">
                       Database:
                     </span>
                     <div className="flex flex-wrap gap-1.5">
@@ -475,7 +475,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
                 )}
                 {details.techBreakdown.tools && (
                   <div className="flex flex-wrap items-center gap-2">
-                    <span className="text-xs font-mono font-semibold text-slate-500 dark:text-slate-400 min-w-[90px]">
+                    <span className="text-xs font-mono font-semibold text-slate-400 min-w-[90px]">
                       Tools / Other:
                     </span>
                     <div className="flex flex-wrap gap-1.5">
@@ -492,22 +492,22 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
           </div>
 
           {/* Modal Footer */}
-          <div className="p-4 sm:p-5 border-t border-slate-100 dark:border-slate-800/80 bg-slate-50/80 dark:bg-slate-900/80 flex items-center justify-between text-xs text-slate-500 dark:text-slate-400 font-mono">
-            <div className="flex items-center gap-3">
+          <div className="p-4 sm:p-5 border-t border-slate-800/80 bg-[#090D16] flex items-center justify-between text-xs text-slate-400 font-mono">
+            <div className="flex items-center gap-2.5">
               <span className="flex items-center gap-1">
-                <Star size={13} className="text-amber-500 fill-amber-500" />
+                <Star size={12} className="text-amber-500 fill-amber-500" />
                 {project.stars} Stars
               </span>
               <span>•</span>
               <span className="flex items-center gap-1">
-                <GitFork size={13} />
+                <GitFork size={12} />
                 {project.forks} Forks
               </span>
             </div>
 
             <button
               onClick={onClose}
-              className="px-4 py-1.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:text-slate-950 dark:hover:text-white text-xs font-semibold cursor-pointer shadow-xs"
+              className="px-4 py-1.5 rounded-xl border border-slate-700 bg-slate-800 text-slate-200 hover:text-white text-xs font-semibold cursor-pointer shadow-xs"
             >
               Close
             </button>

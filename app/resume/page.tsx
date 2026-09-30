@@ -12,13 +12,13 @@ export const metadata = {
 
 export default function ResumePage() {
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 py-10 px-4 sm:px-6 transition-colors">
+    <div className="min-h-screen bg-[#090D16] text-slate-100 py-8 sm:py-10 px-3.5 sm:px-6 transition-colors">
       <div className="max-w-4xl mx-auto">
         {/* Navigation & Action Bar */}
-        <div className="flex flex-wrap items-center justify-between gap-4 mb-8">
+        <div className="flex flex-wrap items-center justify-between gap-3 mb-6 sm:mb-8">
           <Link
             href="/"
-            className="inline-flex items-center gap-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-4 py-2.5 text-xs font-semibold text-slate-700 dark:text-slate-300 hover:text-slate-950 dark:hover:text-white hover:border-indigo-500 transition-all shadow-sm"
+            className="inline-flex items-center gap-2 rounded-xl border border-slate-800 bg-[#0B0F19] px-4 py-2.5 text-xs font-semibold text-slate-300 hover:text-white hover:border-indigo-500 transition-all shadow-sm"
           >
             <ArrowLeft size={14} />
             <span>Back to Portfolio</span>
@@ -28,7 +28,7 @@ export default function ResumePage() {
             <a
               href="/Arvind_Kumar_Resume.pdf"
               download="Arvind_Kumar_Resume.pdf"
-              className="inline-flex items-center gap-2 rounded-xl bg-indigo-600 hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-400 px-5 py-2.5 text-xs font-semibold text-white shadow-lg shadow-indigo-500/25 hover:scale-[1.02] active:scale-[0.98] transition-all cursor-pointer"
+              className="inline-flex items-center gap-2 rounded-xl bg-indigo-500 hover:bg-indigo-400 px-4 sm:px-5 py-2.5 text-xs font-semibold text-white shadow-lg shadow-indigo-500/25 hover:scale-[1.02] active:scale-[0.98] transition-all cursor-pointer"
             >
               <Download size={14} className="text-white" />
               <span>Download PDF</span>
@@ -37,17 +37,17 @@ export default function ResumePage() {
         </div>
 
         {/* Printable Resume Sheet Container */}
-        <div className="rounded-2xl border border-slate-200/90 dark:border-slate-800 p-8 sm:p-12 shadow-xl bg-white dark:bg-slate-900/95 space-y-8 font-sans">
+        <div className="rounded-2xl border border-slate-800 p-5 sm:p-10 md:p-12 shadow-xl bg-[#0B0F19] space-y-6 sm:space-y-8 font-sans">
           {/* Header */}
-          <header className="border-b border-slate-200/80 dark:border-slate-800/80 pb-6 text-center sm:text-left sm:flex sm:justify-between sm:items-end">
+          <header className="border-b border-slate-800/80 pb-5 sm:pb-6 text-center sm:text-left sm:flex sm:justify-between sm:items-end">
             <div>
-              <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+              <h1 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-white">
                 {profile.name}
               </h1>
-              <p className="text-sm font-semibold text-indigo-600 dark:text-indigo-400 mt-1">
+              <p className="text-xs sm:text-sm font-semibold text-indigo-400 mt-1">
                 {profile.education.degree}
               </p>
-              <p className="text-xs text-slate-600 dark:text-slate-400 mt-1">
+              <p className="text-xs text-slate-400 mt-1">
                 {profile.education.institution} • {profile.location}
               </p>
             </div>
